@@ -1,92 +1,81 @@
-!DOCTYPE html>
-<html lang="en">
-
+<!DOCTYPE html>
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Instagram Feed with Bootstrap</title>
-    <!-- Bootstrap Styling link -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <!-- Fontawesome link (For the icons) -->
-    <script src="https://kit.fontawesome.com/072e5df971.js" crossorigin="anonymous"></script>
+    <title>Navbar Fijo con Bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-
 <body>
-    <style>
-        .nav-pill .nav-link{
-            color: grey;
-        }
-        .nav-pill .nav-link.active{
-            color: blue;
-        }
-    </style>
-    <!-- Navbar -->
-    <nav class="navbar navbar-light bg-light py-3">
-        <div class="container-fluid">
-            <div class="d-flex w-100 justify-content-between">
-                <div>
-                    <i class="fa-brands fa-instagram fa-xl"></i>
-                    <h5 class="d-inline-block fs-5">Instagram</h5>
-                </div>
-                <div class="d-flex align-right justify-content-end">
-                    <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-success me-2" data-bs-toggle="modal"
-                        data-bs-target="#exampleModal">
-                        Create a new post
-                    </button>
-                    <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="fa-solid fa-gear"></i>
-                        </button>
-                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center fw-bold" href="#">
+                <i class="fa-brands fa-instagram me-2"></i>
+                <span>Instagram</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+                <ul class="navbar-nav align-items-center">
+                    <li class="nav-item active">
+                        <a class="nav-link" data-bs-toggle="modal" data-bs-target="#createPostModal" href="#">
+                            <span class="btn btn-success">
+                                Create a new post
+                            </span>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown bg-secondary border rounded">
+                        <a class="nav-link dropdown-toggle text-secondary text-white" href="#" id="navbarDropdownMenuLink" role="button" 
+                           data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-gear text-white"></i>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <li><a class="dropdown-item" href="#">Profile</a></li>
-                            <li><a class="dropdown-item" href="#">Accesibility</a></li>
+                            <li><a class="dropdown-item" href="#">Accessibility</a></li>
                             <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item text-danger" href="#">Log out</a></li>
+                            <li><a class="dropdown-item text-danger border-top" href="#">Log out</a></li>
                         </ul>
-                    </div>
-                </div>
+                    </li>
+                </ul>
             </div>
         </div>
-    </nav>
-
-    <!-- Modal Body -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    </nav>      
+    <!-- MODAL -->
+    <div class="modal fade" id="createPostModal" tabindex="-1" aria-labelledby="createPostModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Create a new post</h5>
+                    <h5 class="modal-title" id="createPostModalLabel">Create a new post</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <h6>Caption:</h6>
-                    <textarea class="form-control" placeholder="Add the caption of your post here"
-                        id="floatingTextarea2"></textarea>
-                    <div class="row p-2">
-                        <button class="col-1 border rounded p-1 m-1 btn-light">
-                            <i class="fa-solid fa-camera"></i>
-                        </button>
-                        <button class="col-1 border rounded p-1 m-1 btn-light">
-                            <i class="fa-solid fa-location-dot"></i>
-                        </button>
-                    </div>
+                    <form>
+                        <div class="mb-3">
+                            <label for="postContent" class="form-label">Caption:</label>
+                            <textarea class="form-control" id="postContent" rows="3" placeholder="Add the caption of your post here"></textarea>
+                        </div>
+                    </form>
+                    <button type="button" class="btn bg-light text-center border rounded d-inline-block">
+                        <i class="fa-solid fa-camera-retro"></i>
+                    </button>
+                    <button type="button" class="btn bg-light text-center border rounded d-inline-block">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </button>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-success">Publish</button>
+                    <button type="button" class="btn bg-success text-white">Publish</button>
                 </div>
             </div>
         </div>
-    </div>
-
-    <!-- Toggle Grid -->
-    <div class="container-fluid p-2">
+    </div>  
+    
+    <!-- NAVS AND TABLES REVISAR DE ACÁ PARA ABAJO / DEJO MI CÓDIGO DE ESTA PARTE COMENTADO ABAJO DEL HTML-->
+    <div class="container-fluid p-2"></div>
         <ul class="nav nav-pill justify-content-center" id="myTab" role="tablist">
             <li class="nav-item" role="presentation">
                 <a class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button"
@@ -172,3 +161,74 @@
 </body>
 
 </html>
+
+
+
+
+
+
+
+    
+    <!-- NAVTABS AND TABLES
+    <div class="d-flex justify-content-center">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true"><i class="fa-solid fa-table-cells"></i></button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false"><i class="fa-solid fa-square"></i></button>
+            </li>
+        </ul>
+    </div>
+    <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+            <div id="Grid3columnas" class="section">
+                <div class="row">
+                    <div class="col">
+                        <img src="https://picsum.photos/200/300" alt="Imagen aleatoria 1" class="img-fluid">
+                    </div>
+                    <div class="col">
+                        <img src="https://picsum.photos/200/300" alt="Imagen aleatoria 2" class="img-fluid">
+                    </div>
+                    <div class="col">
+                        <img src="https://picsum.photos/200/300" alt="Imagen aleatoria 3" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+            <div id="Grid1columna" class="section">
+                <div class="row d-flex justify-content-center">
+                    <div class="col-12 mb-3">
+                        <div class="card">
+                            <div class="d-flex justify-content-between p-2">
+                                <span class="card-title fw-bold">My Crazy Dog Spark!</span>
+                                <span class="text-muted">08/26</span>
+                            </div>
+                            <img src="https://picsum.photos/290/170" alt="Imagen aleatoria 4" class="card-img-top img-fluid">
+                            <div class="card-body p-2">
+                                <h6 class="card-title fw-bold">204 likes</h6>
+                                <p class="card-text">Great Instagram photo.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 mb-3">
+                        <div class="card">
+                            <div class="d-flex justify-content-between p-2">
+                                <span class="card-title fw-bold">My Crazy Dog Spark!</span>
+                                <span class="text-muted">08/26</span>
+                            </div>
+                            <img src="https://picsum.photos/290/170" alt="Imagen aleatoria 5" class="card-img-top img-fluid">
+                            <div class="card-body p-2">
+                                <h6 class="card-title fw-bold">204 likes</h6>
+                                <p class="card-text">Great Instagram photo.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html> -->
