@@ -9,9 +9,9 @@
 </head>
 <body>
     <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg bg-light">
-        <div class="container">
-            <a class="navbar-brand d-flex align-items-center fw-bold" href="#">
+    <nav class="navbar navbar-expand-lg bg-light py-3">
+        <div class="container-fluid">
+            <a class="navbar-brand d-flex align-items-center fw-bold ms-4" href="#">
                 <i class="fa-brands fa-instagram me-2"></i>
                 <span>Instagram</span>
             </a>
@@ -28,7 +28,7 @@
                             </span>
                         </a>
                     </li>
-                    <li class="nav-item dropdown bg-secondary border rounded">
+                    <li class="nav-item dropdown bg-secondary border rounded me-5">
                         <a class="nav-link dropdown-toggle text-secondary text-white" href="#" id="navbarDropdownMenuLink" role="button" 
                            data-bs-toggle="dropdown" aria-expanded="false">
                             <i class="fa-solid fa-gear text-white"></i>
@@ -73,135 +73,62 @@
             </div>
         </div>
     </div>  
-    
-    <!-- NAVS AND TABLES REVISAR DE ACÁ PARA ABAJO / DEJO MI CÓDIGO DE ESTA PARTE COMENTADO ABAJO DEL HTML-->
-    <div class="container-fluid p-2"></div>
-        <ul class="nav nav-pill justify-content-center" id="myTab" role="tablist">
-            <li class="nav-item" role="presentation">
-                <a class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button"
-                    role="tab" aria-controls="home" aria-selected="true"><i
-                        class="fa-solid fa-table-cells"></i></a>
-            </li>
-            <li class="nav-item" role="presentation">
-                <a class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button"
-                    role="tab" aria-controls="profile" aria-selected="false"><i class="fa-solid fa-square"></i></a>
-            </li>
-        </ul>
-        <div class="tab-content" id="myTabContent">
-            <!-- 3 photos per row grid -->
-            <div class="tab-pane fade show active overflow-hidden" id="home" role="tabpanel" aria-labelledby="home-tab">
-                <div class="row">
-                    <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;" src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?ixlib=rb-1.2.1&w=1080&fit=max&q=80&fm=jpg&crop=entropy&cs=tinysrgb" class="img-fluid w-100" alt=""></div>
-                    <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;" src="https://c4.wallpaperflare.com/wallpaper/229/140/44/students-boys-girls-study-wallpaper-preview.jpg" class="img-fluid w-100" alt=""></div>
-                    <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;" src="https://wallpaperaccess.com/full/1149888.jpg" class="img-fluid w-100" alt=""></div>
-                </div>
-                <div class="row">
-                    <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;" src="https://c0.wallpaperflare.com/preview/28/977/291/smiling-woman-with-white-background.jpg" class="img-fluid w-100" alt=""></div>
-                    <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;" src="https://i.pinimg.com/originals/02/5c/ba/025cba8ce33ed90181ddc762e69141d5.jpg" class="img-fluid w-100" alt=""></div>
-                    <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;" src="https://i.pinimg.com/736x/af/03/e8/af03e8f301698efda8006b4da49ebf52.jpg" class="img-fluid w-100" alt=""></div>
-                </div>
-                <div class="row">
-                    <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;" src="https://wallpaperaccess.com/full/1447218.jpg" class="img-fluid w-100" alt=""></div>
-                    <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;" src="https://images7.alphacoders.com/122/1228014.png" class="img-fluid w-100" alt=""></div>
-                    <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;" src="https://epostalnews.com/wallpaper/wallpaper/20220827/diverse-college-students-smiling-together-during-class-australian-preview.webp" class="img-fluid w-100" alt=""></div>
-                </div>
-            </div>
-            <!-- 1 photo per row grid -->
-            <div class="tab-pane fade overflow-hidden" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                <div class="row my-4">
-                    <div class="col-6 mx-auto border rounded p-0">
-                        <div class="d-flex p-2">
-                            <div class="w-100 fs-4">My Crazy dog Spark!</div>
-                            <small class="align-bottom">08/26</small>
-                        </div>
-                        <img style="object-fit: cover;" src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?ixlib=rb-1.2.1&w=1080&fit=max&q=80&fm=jpg&crop=entropy&cs=tinysrgb" class="img-fluid w-100 col-12" alt=""/>
-                        <div class="p-2">
-                            <strong>204 Likes</strong>
-                            <p>This is an example of a very good photo that you can post on instagram</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row my-4">
-                    <div class="col-6 mx-auto border rounded p-0">
-                        <div class="d-flex p-2">
-                            <div class="w-100 fs-4">The greatness of Croatia</div>
-                            <small>04/09</small>
-                        </div>
-                        <img style="object-fit: cover;" src="https://wallpaperaccess.com/full/1149888.jpg" class="img-fluid w-100 col-12" alt=""/>
-                        <div class="p-2">
-                            <strong>26985 Likes</strong>
-                            <p>This is an example of a very good photo that you can post on instagram</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row my-4">
-                    <div class="col-6 mx-auto border rounded p-0">
-                        <div class="d-flex p-2">
-                            <div class="w-100 fs-4">Amazing GOAL by Cristiano!</div>
-                            <small>06/10</small>
-                        </div>
-                        <img style="object-fit: cover;" src="https://i.pinimg.com/736x/af/03/e8/af03e8f301698efda8006b4da49ebf52.jpg" class="img-fluid w-100 col-12" alt=""/>
-                        <div class="p-2">
-                            <strong>204 Likes</strong>
-                            <p>This is an example of a very good photo that you can post on instagram</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <!-- Bootstrap Functionalities link  -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
-        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
-        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
-        crossorigin="anonymous"></script>
-</body>
-
-</html>
-
-
-
-
-
-
-
-    
-    <!-- NAVTABS AND TABLES
+    <!-- NAVTABS AND TABLES -->
     <div class="d-flex justify-content-center">
-        <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <ul class="nav nav-tabs border-0" id="myTab" role="tablist">
             <li class="nav-item" role="presentation">
-                <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true"><i class="fa-solid fa-table-cells"></i></button>
+                <button class="nav-link active border-0" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true"><i class="fa-solid fa-table-cells"></i></button>
             </li>
             <li class="nav-item" role="presentation">
-                <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false"><i class="fa-solid fa-square"></i></button>
+                <button class="nav-link border-0" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false"><i class="fa-solid fa-square"></i></button>
             </li>
         </ul>
     </div>
     <div class="tab-content" id="myTabContent">
         <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
             <div id="Grid3columnas" class="section">
-                <div class="row">
-                    <div class="col">
-                        <img src="https://picsum.photos/200/300" alt="Imagen aleatoria 1" class="img-fluid">
+                <div class="row mb-4 d-flex justify-content-center mt-5">
+                    <div class="col text-center col-sm-4 col-md-4 col-lg-3">
+                        <img src="https://picsum.photos/400/525" alt="Imagen aleatoria 1" class="img-fluid">
                     </div>
-                    <div class="col">
-                        <img src="https://picsum.photos/200/300" alt="Imagen aleatoria 2" class="img-fluid">
+                    <div class="col text-center col-sm-4 col-md-4 col-lg-3">
+                        <img src="https://picsum.photos/400/525" alt="Imagen aleatoria 2" class="img-fluid">
                     </div>
-                    <div class="col">
-                        <img src="https://picsum.photos/200/300" alt="Imagen aleatoria 3" class="img-fluid">
+                    <div class="col text-center col-sm-4 col-md-4 col-lg-3">
+                        <img src="https://picsum.photos/400/525" alt="Imagen aleatoria 3" class="img-fluid">
                     </div>
                 </div>
+                <div class="row mb-4 d-flex justify-content-center">
+                  <div class="col text-center col-sm-4 col-md-4 col-lg-3">
+                      <img src="https://picsum.photos/400/525" alt="Imagen aleatoria 1" class="img-fluid">
+                  </div>
+                  <div class="col text-center col-sm-4 col-md-4 col-lg-3">
+                      <img src="https://picsum.photos/400/525" alt="Imagen aleatoria 2" class="img-fluid">
+                  </div>
+                  <div class="col text-center col-sm-4 col-md-4 col-lg-3">
+                      <img src="https://picsum.photos/400/525" alt="Imagen aleatoria 3" class="img-fluid">
+                  </div>
+              </div>
+              <div class="row d-flex justify-content-center mb-4">
+                <div class="col text-center col-sm-4 col-md-4 col-lg-3">
+                    <img src="https://picsum.photos/400/525" alt="Imagen aleatoria 1" class="img-fluid">
+                </div>
+                <div class="col text-center col-sm-4 col-md-4 col-lg-3">
+                    <img src="https://picsum.photos/400/525" alt="Imagen aleatoria 2" class="img-fluid">
+                </div>
+                <div class="col text-center col-sm-4 col-md-4 col-lg-3">
+                    <img src="https://picsum.photos/400/525" alt="Imagen aleatoria 3" class="img-fluid">
+                </div>
+            </div>
             </div>
         </div>
         <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
             <div id="Grid1columna" class="section">
-                <div class="row d-flex justify-content-center">
-                    <div class="col-12 mb-3">
+                <div class="row d-flex justify-content-center mt-5">
+                    <div class="col col-sm-6 col-md-8 col-lg-6 mb-4">
                         <div class="card">
-                            <div class="d-flex justify-content-between p-2">
+                            <div class="d-flex justify-content-between">
                                 <span class="card-title fw-bold">My Crazy Dog Spark!</span>
                                 <span class="text-muted">08/26</span>
                             </div>
@@ -212,23 +139,41 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 mb-3">
-                        <div class="card">
-                            <div class="d-flex justify-content-between p-2">
-                                <span class="card-title fw-bold">My Crazy Dog Spark!</span>
-                                <span class="text-muted">08/26</span>
-                            </div>
-                            <img src="https://picsum.photos/290/170" alt="Imagen aleatoria 5" class="card-img-top img-fluid">
-                            <div class="card-body p-2">
-                                <h6 class="card-title fw-bold">204 likes</h6>
-                                <p class="card-text">Great Instagram photo.</p>
-                            </div>
+                </div>
+                <div class="row d-flex justify-content-center">
+                  <div class="col col-sm-6 col-md-8 col-lg-6 mb-4">
+                      <div class="card">
+                          <div class="d-flex justify-content-between">
+                              <span class="card-title fw-bold">My Crazy Dog Spark!</span>
+                              <span class="text-muted">08/26</span>
+                          </div>
+                          <img src="https://picsum.photos/290/170" alt="Imagen aleatoria 4" class="card-img-top img-fluid">
+                          <div class="card-body p-2">
+                              <h6 class="card-title fw-bold">204 likes</h6>
+                              <p class="card-text">Great Instagram photo.</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="row d-flex justify-content-center">
+                <div class="col col-sm-6 col-md-8 col-lg-6 mb-4">
+                    <div class="card">
+                        <div class="d-flex justify-content-between">
+                            <span class="card-title fw-bold">My Crazy Dog Spark!</span>
+                            <span class="text-muted">08/26</span>
+                        </div>
+                        <img src="https://picsum.photos/290/170" alt="Imagen aleatoria 4" class="card-img-top img-fluid">
+                        <div class="card-body p-2">
+                            <h6 class="card-title fw-bold">204 likes</h6>
+                            <p class="card-text">Great Instagram photo.</p>
                         </div>
                     </div>
                 </div>
             </div>
+            </div>
         </div>
-    </div>   
+    </div> 
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-</html> -->
+</html>
